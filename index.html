@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invincible War</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invincible War</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="shortcut icon" href="assets/images/Invincible_comic_series_logo.png" type="image/x-icon">
+  <script src="scripts/main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Invincible War</h1>
-        </header>
-    
-        <main>
-    
-        </main>    
+  <!-- Fundo do carrossel -->
+  <div class="bg-carousel"></div>
+  
+  <div class="container">
+    <header class="head">
+      <h1>Invincible War</h1>
+    </header>
 
-        <div class="controls">
-            <audio src="" controls></audio>
+    <!-- Card de música com vídeo de fundo -->
+    <main class="music-card">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/videos/Invincible Variants.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+    </main>    
+
+    <!-- Player de música customizado -->
+    <div class="player">
+      <!-- Container dos controles -->
+      <div class="player-controls">
+        <div class="play-pause-container">
+          <button class="play-pause-btn"></button>
         </div>
+      </div>
+      <!-- Barra de progresso (controle de áudio) -->
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <!-- Elemento de áudio com autoplay e loop -->
+      <audio id="audio" src="assets/audio/Holy Fuck - Tom Tom.mp3" autoplay loop></audio>
     </div>
+  </div>
+
+  <!-- Controle de volume (aside) -->
+  <aside class="volume-control">
+    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1">
+  </aside>
 </body>
 </html>
